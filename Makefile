@@ -881,7 +881,7 @@ ffmpeg_rebuild:
 
 # linuxdvb git tree
 $(ROOTDIR)/data/dvb-scan/.stamp:
-	@echo "Receiving data/dvb-scan from https://github.com/tvheadend/dtv-scan-tables.git#tvheadend"
+	@echo "Receiving data/dvb-scan from https://github.com/dnmnhat/dtv-scan-tables.git#tvheadend"
 	@rm -rf $(ROOTDIR)/data/dvb-scan/*
 	@$(ROOTDIR)/support/getmuxlist $(ROOTDIR)/data/dvb-scan
 	@touch $@

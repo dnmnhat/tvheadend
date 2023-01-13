@@ -51,6 +51,7 @@ CFLAGS  += -Werror
 endif
 CFLAGS  += -Wall -Wwrite-strings -Wno-deprecated-declarations
 CFLAGS  += -Wmissing-prototypes
+CFLAGS  += -fno-strict-aliasing
 CFLAGS  += -fms-extensions -funsigned-char
 CFLAGS  += -D_FILE_OFFSET_BITS=64
 CFLAGS  += -I${BUILDDIR} -I${ROOTDIR}/src -I${ROOTDIR}
@@ -92,7 +93,6 @@ ifeq ($(CONFIG_LIBAV),yes)
 FFMPEG_LIBS := \
     libavfilter \
     libswresample \
-    libavresample \
     libswscale \
     libavformat \
     libavcodec \
